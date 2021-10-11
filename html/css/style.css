@@ -16,6 +16,9 @@ body {
     width: 90%;
     box-shadow: 6px 6px 7px #999898ab;
     border: 1px solid #dddcdc;
+    
+    
+
 }
 
 .checkout__top {
@@ -200,4 +203,20 @@ input[type="button"] {
     justify-content: space-between;
     margin-bottom: 5px;
 }
+@media screen and (max-width: 992px) and (min-width: 991px){
+    .checkout { 
+        margin: 20px 100px;
+    }
+    
+  }
+@media screen and (max-width: 400px){
+    .left__walletCards{
+        flex-wrap: wrap;
+    }
+  }
+@media screen and (max-width: 767px) {
+    .checkout__top {
+        display: none;
+    }
+  }
 
