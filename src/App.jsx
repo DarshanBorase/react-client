@@ -1,8 +1,9 @@
 import React from 'react';
-import { ThemeProvider } from '@mui/material/styles';
-import { Typography } from '@mui/material';
-import theme from './theme';
-import { ChildrenDemo, Trainee } from './pages';
+// import { ThemeProvider } from '@mui/material/styles';
+// import { Typography } from '@mui/material';
+// import theme from './theme';
+// import { ChildrenDemo, Trainee } from './pages';
+import Trainee from './pages/Trainee/trainee';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
     //     <ChildrenDemo />
     //   </Typography>
     // </ThemeProvider>
-    <Trainee />
+    < Trainee />
   );
 }
 
