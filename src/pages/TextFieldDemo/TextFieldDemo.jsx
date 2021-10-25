@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { SelectField, RadioGroup, TextField } from '../../Component';
+import { SelectField, RadioGroup, TextField } from '../../component';
 import { inputDemoContainer } from './style';
 
 const TextFieldDemo = () => {

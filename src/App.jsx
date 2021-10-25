@@ -1,15 +1,17 @@
 import React from 'react';
-import InputDemo from './pages/InputDemo'
-
+import { ThemeProvider } from '@mui/material/styles';
+import { Typography } from '@mui/material';
+import theme from './theme';
+import { ChildrenDemo } from './pages';
 
 function App() {
   return (
-    <div>
-        <InputDemo />
-        
-    </div>
+    <ThemeProvider theme={theme}>
+      <Typography>
+        <ChildrenDemo />
+      </Typography>
+    </ThemeProvider>
   );
 }
 
 export default App;
-
