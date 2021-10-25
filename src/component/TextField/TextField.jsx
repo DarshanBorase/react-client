@@ -4,13 +4,13 @@ import { error, errorBorder, input } from './style';
 
 const TextField = (props) => {
   const {
-    label, value, disabled, errorMessage, onChange,
+    label, value, disabled, errorMessage, onChange, onBlur
   } = props;
   return (
     <>
       <label htmlFor>
         <b>{label}</b>
-        <input name="name" onChange={onChange} style={errorMessage ? errorBorder : input} type="text" value={value} disabled={disabled} />
+        <input onBlur={onBlur} name="name" onChange={onChange} style={errorMessage ? errorBorder : input} type="text" value={value} disabled={disabled} />
       </label>
       <div style={error}>{errorMessage}</div>
     </>

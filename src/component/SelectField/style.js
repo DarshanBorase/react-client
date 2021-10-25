@@ -1,13 +1,11 @@
 export const selectInput = {
-
-padding: '12px 20px',
+  padding: '12px 20px',
   width: '100%',
-  'border-radius': '4px',
 };
-export const selectOption = {
-  'background-color': '#BDC3CB',
-};
-export const boldlabel = {
-  'margin-right': '5px',
+
+export const errorMessage = {
+  color: 'red',
+  marginLeft: '5px',
+  marginRight: '12px',
 };
 
