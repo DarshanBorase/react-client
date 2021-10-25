@@ -1,24 +1,20 @@
-
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-image: url(/images/background.jpg);
+    background-image: url(../../images/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .checkout {
     background: white;
-    margin: 100px auto;
-    width: 90%;
+    margin: 4em ;
+    width: auto;
     box-shadow: 6px 6px 7px #999898ab;
     border: 1px solid #dddcdc;
-    
-    
-
 }
 
 .checkout__top {
@@ -59,6 +55,7 @@ body {
 
 .main {
     display: flex;
+    flex: 0.5;
 }
 
 .main__left {
@@ -72,40 +69,40 @@ body {
 }
 
 .wallet {
-    padding: 20px 10px 0px 0px;
-    text-align: start;
-    font-weight: 600;
-    color: #636463;
-    font-size: small;
+    color: gray;
+    padding: 10px 0px 10px 0px;
 }
 
 .left__walletCards {
     display: flex;
     justify-content: space-between;
     padding: 15px 0px;
+
+    /* padding:10px; */
 }
 
 .walletCards__image {
     width: 200px;
     padding: 10px;
+    /*margin: 5px; */
     border-radius: 4px;
 }
 
 .walletCards__images {
-    width: 200px;
+    max-width: 100%;
+    max-height: 100%;
+
+    /* margin: 10px; */
 }
 
 .img--active {
-    border: 1px solid #ddd;
-}
-
-.productDetails__cards {
-    flex: 0.35;
+    border: 1px solid #999898;
 }
 
 .left__bottomForm {
     width: 350px;
     margin: auto;
+
 }
 
 input[type="text"] {
@@ -141,6 +138,11 @@ input[type="button"] {
     justify-content: space-between;
 }
 
+
+/* .form__50 {
+    width: 50%;
+} */
+
 .form__margin {
     margin-right: 10px !important;
 }
@@ -157,6 +159,8 @@ input[type="button"] {
 
 .main__right {
     background-color: rgb(243, 242, 242);
+    margin-right: 0px !important;
+    width: 100%;
 }
 
 .product {
@@ -203,20 +207,114 @@ input[type="button"] {
     justify-content: space-between;
     margin-bottom: 5px;
 }
-@media screen and (max-width: 992px) and (min-width: 991px){
-    .checkout { 
-        margin: 20px 100px;
+
+@media screen and (max-width: 992px) {
+
+    .main__left {
+        flex: 0.6;
     }
-    
-  }
-@media screen and (max-width: 400px){
-    .left__walletCards{
+
+    .main__right {
+        flex: 0.4
+    }
+
+}
+
+@media screen and (max-width: 399px)and (min-width:582px) {
+    .left__walletCards {
         flex-wrap: wrap;
     }
-  }
+
+}
+
 @media screen and (max-width: 767px) {
-    .checkout__top {
+    .checkout__badges {
         display: none;
     }
-  }
+}
 
+@media screen and (max-width: 600px) {
+    .checkout{
+        max-width: 100%;
+        margin: 50px 50px
+    }
+    .main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+}
+
+@media screen and (max-width: 768px) and (min-width:992px) {
+    .main {
+        display: flex;
+        flex: 0.5;
+    }
+
+    .main__left {
+        flex: 1 1 auto;
+
+    }
+
+}
+
+@media screen and (min-width:654px) and (max-width: 767px) {
+    .main {
+        display: flex;
+        flex-wrap: nowrap;
+        flex: 0.5;
+    }
+
+    .main__left {
+        flex: 0.5;
+    }
+
+    .walletCards__image {
+        width: 100%;
+    }
+
+    .walletCards__images {
+        width: 100%;
+    }
+
+    .main__right {
+        flex: 0.5;
+    }
+
+    .left__bottomForm {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width: 1004px) {
+    
+    .checkout{
+        margin: 50px 50px;
+        margin-inline: 5px;
+    }
+    .main {
+        display: flex;
+        flex: 0.5;
+        flex-wrap: nowrap;
+    }
+
+    .main__left {
+        flex: 0.5;
+    }
+
+    .walletCards__image {
+        width: 100%;
+    }
+
+    .walletCards__images {
+        width: 100%;
+    }
+
+    .main__right {
+        flex: 0.5;
+    }
+
+    .left__bottomForm {
+        margin-top: 30px;
+    }
+}

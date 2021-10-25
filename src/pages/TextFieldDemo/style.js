@@ -3,7 +3,7 @@ export const mainContainer = {
     width: '100%',
   };
   
-  export const inputContainer = {
+export const inputDemoContainer = {
     width: 'auto',
     display: 'flex',
     'flex-direction': 'column',
@@ -11,7 +11,6 @@ export const mainContainer = {
     'margin-left': '5px',
   };
   
-  export const headingStyle = {
+export const headingStyle = {
     'margin-left': '5px',
   };
-  
