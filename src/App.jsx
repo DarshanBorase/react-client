@@ -1,18 +1,14 @@
 import React from 'react';
-// import { ThemeProvider } from '@mui/material/styles';
-// import { Typography } from '@mui/material';
-// import theme from './theme';
-// import { ChildrenDemo, Trainee } from './pages';
 import Trainee from './pages/Trainee/trainee';
-
+import { Navbar } from './pages/components';
+import Login from './pages/Login';
 function App() {
   return (
-    // <ThemeProvider theme={theme}>
-    //   <Typography>
-    //     <ChildrenDemo />
-    //   </Typography>
-    // </ThemeProvider>
+    <>
+    <Navbar />
     < Trainee />
+    <Login />
+    </>
   );
 }
 
