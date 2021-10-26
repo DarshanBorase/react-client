@@ -1,12 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-// import { AddDialog } from '../../../components/Trainee/components';
+import { linkStyle } from './Style';
 
 const Navbar = () => (
   <Box sx={{ flexGrow: 1 }}>
@@ -24,15 +24,46 @@ const Navbar = () => (
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Trainee Portal
         </Typography>
-        <Button color="inherit">TRAINEE</Button>
-        <Button color="inherit">TEXTFIELD DEMO</Button>
-        <Button color="inherit">INPUTDEMO</Button>
-        <Button color="inherit">CHILDERN DEMO</Button>
-        <Button color="inherit">LOGOUT</Button>
+
+        <Link
+          style={linkStyle}
+          exact
+          to="/trainee"
+        >
+          TRAINEE
+
+        </Link>
+        <Link
+          style={linkStyle}
+          exact
+          to="/textfielddemo"
+        >
+          TEXTFIELDDEMO
+
+        </Link>
+        <Link
+          style={linkStyle}
+          exact
+          to="/inputdemo"
+        >
+          INPUTDEMO
+        </Link>
+        <Link
+          style={linkStyle}
+          exact
+          to="/childrendemo"
+        >
+          CHILDRENDEMO
+        </Link>
+        <Link
+          style={linkStyle}
+          exact
+          to="/login"
+        >
+          LOG OUT
+        </Link>
       </Toolbar>
     </AppBar>
   </Box>
 );
-
 export default Navbar;
-

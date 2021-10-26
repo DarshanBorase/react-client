@@ -1,91 +1,28 @@
-import React, { useEffect, useState } from 'react';
-import { SelectField, RadioGroup, TextField } from '../../component';
-import { inputDemoContainer } from './style';
+import React from 'react';
+import { TextField, Slider } from '../../component';
+import { inputContainer, mainContainer } from './style';
+import { PUBLIC_IMAGE_FOLDER, DEFAULT_BANNER_IMAGE } from '../../configs/constant';
 
 const TextFieldDemo = () => {
-  const selectOptions = [
-    {
-      value: 'cricket',
-      label: 'Cricket',
-    },
-    {
-      value: 'football',
-      label: 'Football',
-    },
-
+  const images = [
+    `${PUBLIC_IMAGE_FOLDER}cloud.jpg`,
+    `${PUBLIC_IMAGE_FOLDER}dns-server.png`,
+    `${PUBLIC_IMAGE_FOLDER}full-stack-web-development.jpg`,
+    `${PUBLIC_IMAGE_FOLDER}js.jpg`,
+    `${PUBLIC_IMAGE_FOLDER}load-balancer.png`,
   ];
-
-  const radioOptions = [
-    {
-      value: 'cricket',
-      label: 'Wicket-Keeper',
-    },
-    {
-      value: 'cricket',
-      label: 'Batsmen',
-    },
-    {
-      value: 'cricket',
-      label: 'Bowler',
-    },
-    {
-      value: 'cricket',
-      label: 'All Rounder',
-    },
-    {
-      value: 'football',
-      label: 'Defender',
-    },
-    {
-      value: 'football',
-      label: 'striker',
-    },
-  ];
-
-  const [value, setValue] = useState({
-    name: '',
-    sport: '',
-    cricket: '',
-    football: '',
-  });
-
-  const handleSportChange = (event) => {
-    setValue({
-      name: value.name,
-      sport: event.target.value,
-      cricket: '',
-      football: '',
-    });
-  };
-
-  const handleNameChange = (event) => {
-    setValue({
-      name: event.target.value,
-      sport: value.sport,
-      cricket: value.cricket,
-      football: value.football,
-    });
-  };
-
-  const handleSportProfileChange = (event) => {
-    setValue({
-      name: value.name,
-      sport: value.sport,
-      cricket: value.sport && value.sport === 'cricket' ? event.target.attributes.label.value : '',
-      football: value.sport && value.sport === 'football' ? event.target.attributes.label.value : '',
-    });
-  };
-
-  useEffect(() => {
-    console.log(value);
-  });
 
   return (
-    <div style={inputDemoContainer}>
-      <TextField label="Name" onChange={handleNameChange} />
-      <SelectField defaultText="Select" value={value.sport} options={selectOptions} onChange={handleSportChange} />
-      <RadioGroup value={value.sport} options={radioOptions} onChange={handleSportProfileChange} />
-    </div>
+    <>
+      <div style={mainContainer}>
+        <Slider altText="Image not found" banners={images} defaultBanner={DEFAULT_BANNER_IMAGE} duration={2000} height={200} random={false} />
+      </div>
+      <div style={inputContainer}>
+        <TextField label="This is a disable Input" value="Disabled Input" disabled />
+        <TextField label="A Valid Input" value="Accessible" disabled={false} />
+        <TextField label="An Input with error" value="101" errorMessage="Could not be greater than" disabled={false} />
+      </div>
+    </>
   );
 };
 
