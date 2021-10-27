@@ -10,6 +10,7 @@ import {
 import AuthRoutes from './routes/AuthRoutes';
 import PrivateRoutes from './routes/PrivateRoutes';
 import TraineeDetail from './pages/Trainee/TraineeDetail'
+import TraineeList from './pages/Trainee/TraineeList';
 function App() {
   return (
     <div className="App">
@@ -22,6 +23,7 @@ function App() {
           <PrivateRoutes exact path="/trainee" component={Trainee} />
           <PrivateRoutes exact path="/" component={Trainee} />
           <PrivateRoutes exact path="/trainee/:id" component={TraineeDetail} />
+          <PrivateRoutes exact path="/trainee/:id" component={TraineeList} />
           <PrivateRoutes component={NoMatch} />
         </Switch>
       </BrowserRouter>
