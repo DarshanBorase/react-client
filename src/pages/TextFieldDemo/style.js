@@ -3,7 +3,7 @@ export const mainContainer = {
     width: '100%',
   };
   
-export const inputDemoContainer = {
+export const inputContainer = {
     width: 'auto',
     display: 'flex',
     'flex-direction': 'column',
